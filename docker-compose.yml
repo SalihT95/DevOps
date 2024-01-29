@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web:
+    build: ~/rickandmorty
+    command: python3 rickandmorty.py -h 0.0.0.0
+    volumes:
+      - ~/rickandmorty/:/usr/src/app
+    ports:
+      - 5001:5000
