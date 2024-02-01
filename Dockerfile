@@ -15,3 +15,7 @@ RUN pip install -r requirements.txt
 
 # copy project
 COPY . /usr/src/app/
+
+EXPOSE 5000
+
+CMD [ "python" , "rickandmorty.py" ]
