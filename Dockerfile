@@ -1,7 +1,7 @@
 # pull official base image
 FROM python:3.11.3-slim-buster
 
-#set work directory
+#set work directory 
 WORKDIR /usr/src/app
 
 #set environment variables

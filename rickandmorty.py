@@ -19,7 +19,7 @@ class RickResponse(Resource):
             return {'message': 'Bir hata oluştu', 'error': str(e)}, 500
 
 # Add URL endpoints
-api.add_resource(RickResponse, '/character/<int:page_number>')  # <int:page_number> ile bir sayı beklediğimizi belirtiyoruz
+api.add_resource(RickResponse, '/character/<int:page_number>')  # <int:page_number> ile bir sayı beklediğimizi belirtiyoruz.
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
