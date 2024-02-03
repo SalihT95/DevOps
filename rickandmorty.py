@@ -14,12 +14,12 @@ class RickResponse(Resource):
                 data = response.json()
                 return {'data': data}, 200
             else:
-                return {'message': 'Veri alınamadi', 'status_code': response.status_code}, 404
+                return {'message': 'Veri alinamadi', 'status_code': response.status_code}, 404
         except Exception as e:
             return {'message': 'Bir hata oluştu', 'error': str(e)}, 500
 
 # Add URL endpoints
-api.add_resource(RickResponse, '/ch/<int:page_number>')  # <int:page_number> ile bir sayı beklediğimizi belirtiyoruz
+api.add_resource(RickResponse, '/chr/<int:page_number>')  # <int:page_number> ile bir sayı beklediğimizi belirtiyoruz
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
